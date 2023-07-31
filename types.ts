@@ -8,7 +8,8 @@ export interface Billboard {
 export interface Category {
     id: string
     name: string
-    imageUrl: Billboard
+    billboard: Billboard
+    
 }
 
 
