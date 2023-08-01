@@ -21,7 +21,6 @@ const ProductPage: React.FC<ProductPageProps> = async ({
         categoryId: product?.category?.id
     });
 
-    console.log(suggestedProducts);
 
 
 
