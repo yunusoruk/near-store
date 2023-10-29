@@ -16,7 +16,7 @@ const GalleryTab: FC<GalleryTabProps> = ({
         image
 }) => {
         return (
-                <Tab className='relative aspect-square flex cursor-pointer items-center justify-center rounded-md bg-white' >
+                <Tab className='relative aspect-square flex cursor-pointer items-center justify-center rounded-md bg-background' >
                         {({ selected }) => (
                                 <div className="">
                                         <span className='absolute h-full w-full aspect-square inset-0 overflow-hidden rounded-md' >

@@ -5,7 +5,7 @@ import qs from "query-string"
 import { Color, Size } from '@/types';
 import { useRouter, useSearchParams } from 'next/navigation';
 import type { FC } from 'react';
-import Button from "@/components/ui/button";
+import Button from "@/components/ui/button-site";
 import { cn } from "@/lib/utils";
 
 interface FilterProps {

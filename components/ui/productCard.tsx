@@ -9,6 +9,7 @@ import Currency from './currency';
 import { useRouter } from 'next/navigation';
 import usePreviewModal from '@/hooks/use-preview-modal';
 import useCart from '@/hooks/use-cart';
+import { Button } from './button';
 
 interface ProductCardProps {
     data: Product
@@ -39,41 +40,42 @@ const ProductCard: FC<ProductCardProps> = ({
     }
 
     return (
-        <div onClick={handleClick} className='bg-white group cursor-pointer p-3 space-y-4 border rounded-xl'>
+        <div onClick={handleClick} className='bg-card shadow-sm  group cursor-pointer  space-y-4 border rounded-lg'>
             {/* IMAGES & ACTIONS */}
-            <div className="aspect-square rounded-xl bg-gray-100 relative">
+            <div className="aspect-square rounded-xl relative">
                 <Image
                     alt='Product Image'
                     src={data?.images?.[0].url}
                     fill
-                    className='aspect-square object-cover rounded-md'
+                    className='aspect-square object-cover rounded-t-lg'
                 />
                 <div className="opacity-0 group-hover:opacity-100 transition absolute w-full px-6 bottom-6">
                     <div className="flex gap-x-6 justify-center">
                         <IconButton
                             onClick={onPreview}
-                            icon={<Expand size={20} className='text-gray-600' />}
+                            icon={<Expand size={20} className='text-muted-foreground' />}
                             className=''
                         />
                         <IconButton
                             onClick={onAddCart}
-                            icon={<ShoppingCart size={20} className='text-gray-600' />}
+                            icon={<ShoppingCart size={20} className='text-muted-foreground' />}
                             className=''
                         />
+
                     </div>
                 </div>
             </div>
             {/* DESCRIPTION */}
-            <div>
+            <div className='px-2'>
                 <p className='font-semibold text-lg'>
                     {data.name}
                 </p>
-                <p className='text-sm text-gray-500'>
+                <p className='text-sm text-muted-foreground'>
                     {data.category?.name}
                 </p>
             </div>
             {/* PRICE */}
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between px-2 pb-4">
                 <Currency
                     value={data.price}
                 />
