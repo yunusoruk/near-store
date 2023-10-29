@@ -5,10 +5,8 @@ import getSizes from '@/actions/getSizes';
 import Billboard from '@/components/billboard';
 import Container from '@/components/ui/container';
 import type { FC } from 'react';
-import Filter from './components/filter';
 import NoResults from '@/components/ui/no-results';
 import ProductCard from '@/components/ui/productCard';
-import MobileFilters from './components/mobile-filters';
 import FilterBar from './components/filter-bar';
 
 export const revalidate = 0
