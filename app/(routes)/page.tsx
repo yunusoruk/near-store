@@ -14,7 +14,7 @@ const HomePage = async () => {
     return (
         <div className="container space-y-10 pb-10">
             <PageHeader className="pb-8">
-                <PageHeaderHeading>Find things you'll love.</PageHeaderHeading>
+                <PageHeaderHeading>Find things you&apos;ll love.</PageHeaderHeading>
                 <PageHeaderDescription>
                     Welcome to Near Store, where style meets convenience, and shopping becomes an extraordinary experience.
                 </PageHeaderDescription>
